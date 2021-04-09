@@ -41,7 +41,10 @@ const useStyles = makeStyles((theme) => {
 		header: {
 			display: 'flex',
 			flexGrow: 1,
-			marginLeft: '-10px',
+			marginLeft: '-30px',
+			[theme.breakpoints.down('sm')]: {
+				marginLeft: '-10px',
+			}
 		},
 		headerList: {
 			display: 'flex',
@@ -78,7 +81,7 @@ const useStyles = makeStyles((theme) => {
 			 width: 'auto',
 			 marginRight: '10px',
 			 [theme.breakpoints.down('md')]: {
-				 marginRight: '-8px',
+				 marginRight: '-12px',
 				//  display: 'none',
 			 },
 			 [theme.breakpoints.down('xs')]: {
@@ -133,9 +136,9 @@ const NavBar = () => {
 								Alimento
 								</Typography>
 							</ListItem>
-							<ListItem>
+							{/* <ListItem>
 								<Link to="/" className={classes.headerLinksText}>Home</Link>
-							</ListItem>
+							</ListItem> */}
 							<ListItem>
 								<Link to="/" className={classes.headerLinksText}>About</Link>
 							</ListItem>
@@ -153,7 +156,6 @@ const NavBar = () => {
 						<InputBase
 							placeholder="Search…"
 							className={classes.searchInput}
-							inputProps={{ 'aria-label': 'search' }}
 						/>
 					</div>
 
