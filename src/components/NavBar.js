@@ -1,8 +1,9 @@
-import { ListItemText, makeStyles } from "@material-ui/core";
+import {  makeStyles } from "@material-ui/core";
 import InputBase from '@material-ui/core/InputBase';
 import Button  from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -10,10 +11,7 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import {  purple, teal } from '@material-ui/core/colors';
 import { Link } from 'react-router-dom';
-// import FacebookIcon from '@material-ui/icons/Facebook';
-// import TwitterIcon from '@material-ui/icons/Twitter';
-// import InstagramIcon from '@material-ui/icons/Instagram';
-// import Brightness4Icon from '@material-ui/icons/Brightness4';
+import Drawer from '@material-ui/core/Drawer';
 import SearchOutlined  from "@material-ui/icons/SearchOutlined";
 
 const useStyles = makeStyles((theme) => {
@@ -74,7 +72,7 @@ const useStyles = makeStyles((theme) => {
 			color: 'white',
 		},
 		searchBar: {
-			 backgroundColor: 'black',
+			 backgroundColor: 'white',
 			 display: 'flex',
 			 borderRadius: theme.shape.borderRadius,
 			 height: '32px',
@@ -133,7 +131,7 @@ const NavBar = () => {
 						<List className={classes.headerList}>
 							<ListItem>
 								<Typography className={classes.title} noWrap variant="h5">
-								Alimento
+								<Link to="/" className={classes.headerLinksText}>Alimento</Link>
 								</Typography>
 							</ListItem>
 							{/* <ListItem>
