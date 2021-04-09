@@ -121,7 +121,7 @@ const NavBar = () => {
       <AppBar
         position="sticky"
         elevation={2}
-        color="secondary"
+        // color="secondary"
         className={[classes.navbar, classes.whiteColor]}
       >
         <Toolbar>
