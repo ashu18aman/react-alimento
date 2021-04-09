@@ -74,7 +74,7 @@ const useStyles = makeStyles((theme) => {
 			color: 'white',
 		},
 		searchBar: {
-			 backgroundColor: 'black',
+			//  backgroundColor: 'black',
 			 display: 'flex',
 			 borderRadius: theme.shape.borderRadius,
 			 height: '32px',
