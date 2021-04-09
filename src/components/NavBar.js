@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => {
         display: "none",
       },
     },
-    titleLinksText: {
+    titleLinkText: {
       textDecoration: "none",
       color: "white",
     },
@@ -139,7 +139,7 @@ const NavBar = () => {
 						<List className={classes.headerList}>
 							<ListItem>
 								<Typography className={classes.title} noWrap variant="h5">
-								<Link to="/" className={classes.titleLinksText}>Alimento</Link>
+								<Link to="/" className={classes.titleLinkText}>Alimento</Link>
 								</Typography>
 							</ListItem>
 							{/* <ListItem>
