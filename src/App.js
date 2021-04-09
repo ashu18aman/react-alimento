@@ -1,6 +1,20 @@
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core';
+import NavBar from "./components/NavBar";
+
+const theme = createMuiTheme({
+  
+})
+
+
 function App() {
+  
   return (
-   <h1>Hello World</h1>
+    <ThemeProvider theme={theme}>
+      <Router>
+        <NavBar />
+      </Router>
+    </ThemeProvider>
   );
 }
 
