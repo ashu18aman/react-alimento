@@ -39,8 +39,6 @@ const useStyles = makeStyles((theme) => {
     },
     title: {
       // flexGrow: 1,
-      // marginLeft: '10px',
-      // marginRight: '20px',
     },
     header: {
       display: "flex",
@@ -91,7 +89,6 @@ const useStyles = makeStyles((theme) => {
       marginRight: "10px",
       [theme.breakpoints.down("md")]: {
         marginRight: "-12px",
-        //  display: 'none',
       },
       [theme.breakpoints.down("xs")]: {
         display: "none",
@@ -99,12 +96,7 @@ const useStyles = makeStyles((theme) => {
     },
     searchIcon: {
       padding: theme.spacing(0.5, 2),
-      // height: '10px',
-      // position: 'absolute',
       pointerEvents: "none",
-      // display: 'flex',
-      // alignItems: 'center',
-      // justifyContent: 'center',
     },
     searchInput: {
       padding: theme.spacing(2, 0),
@@ -151,9 +143,6 @@ const useStyles = makeStyles((theme) => {
       // height: '10px',
       // position: 'absolute',
       pointerEvents: "none",
-      // display: 'flex',
-      // alignItems: 'center',
-      // justifyContent: 'center',
     },
     drawerIcon: {
       marginRight: '15px',
@@ -182,7 +171,6 @@ const NavBar = () => {
       <AppBar
         position="sticky"
         elevation={2}
-        // color="secondary"
         className={[classes.navbar, classes.whiteColor]}
       >
         <Toolbar>
