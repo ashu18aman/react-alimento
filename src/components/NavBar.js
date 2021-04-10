@@ -19,6 +19,9 @@ import SearchOutlined from "@material-ui/icons/SearchOutlined";
 import RestaurantMenuIcon from '@material-ui/icons/RestaurantMenu';
 import InfoIcon from '@material-ui/icons/Info';
 
+//color variable
+const black = 'black';
+
 const useStyles = makeStyles((theme) => {
   return {
     navbar: {
@@ -96,6 +99,7 @@ const useStyles = makeStyles((theme) => {
     searchIcon: {
       padding: theme.spacing(0.5, 2),
       pointerEvents: "none",
+      color: black,
     },
     searchInput: {
       padding: theme.spacing(2, 0),
@@ -117,7 +121,7 @@ const useStyles = makeStyles((theme) => {
     },
     drawerLinksText: {
       textDecoration: "none",
-      color: "white",
+      color: black,
       display: 'flex',
       marginBottom: '10px',
     },
@@ -141,11 +145,12 @@ const useStyles = makeStyles((theme) => {
       marginRight: '11px',
       // height: '10px',
       // position: 'absolute',
-      //position:relative,
       pointerEvents: "none",
+      color: black,
     },
     drawerIcon: {
       marginRight: '15px',
+      color: black,
     },
     avatar: {
       margin: '20px 10px 20px 0',
