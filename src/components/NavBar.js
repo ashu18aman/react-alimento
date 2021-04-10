@@ -141,6 +141,7 @@ const useStyles = makeStyles((theme) => {
       marginRight: '11px',
       // height: '10px',
       // position: 'absolute',
+      //position:relative,
       pointerEvents: "none",
     },
     drawerIcon: {
