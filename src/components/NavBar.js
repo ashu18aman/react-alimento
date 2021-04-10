@@ -140,7 +140,6 @@ const useStyles = makeStyles((theme) => {
       fontSize: '3px',
       marginRight: '11px',
       // height: '10px',
-      // position: 'absolute',
       //position:relative,
       pointerEvents: "none",
     },
