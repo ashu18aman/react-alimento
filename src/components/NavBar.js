@@ -4,13 +4,12 @@ import InputBase from "@material-ui/core/InputBase";
 import Button from "@material-ui/core/Button";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
-import ListItemText from "@material-ui/core/ListItemText";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
-import { purple, teal } from "@material-ui/core/colors";
+import { purple } from "@material-ui/core/colors";
 import { Link } from "react-router-dom";
 import Avatar from '@material-ui/core/Avatar';
 import Drawer from '@material-ui/core/Drawer';
@@ -140,11 +139,8 @@ const useStyles = makeStyles((theme) => {
       },
     },
     drawerSearchIcon: {
-      // padding: theme.spacing(0.5, 3),
       fontSize: '3px',
       marginRight: '11px',
-      // height: '10px',
-      // position: 'absolute',
       pointerEvents: "none",
       color: black,
     },
@@ -241,7 +237,7 @@ const NavBar = () => {
         </Toolbar>
       </AppBar>
 
-
+      {/* Drawer */}
       <Drawer 
         anchor = "left" 
         open = {left} 
@@ -249,9 +245,6 @@ const NavBar = () => {
         className = {classes.drawer}
         classes = {{ paper: classes.drawerPaper }}
       >
-          
-
-
           <List>
               <ListItem>
                 <Avatar className={classes.avatar} />
