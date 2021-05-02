@@ -7,14 +7,12 @@ import img3 from "./Images/thali.jpg";
 const MyCarousel = () => {
   return (
     <div>
-      <Carousel interval={3000} fade="true">
+      <Carousel interval={3000} fade="true" controls={false}>
         <Carousel.Item>
           <img
             className="d-block w-100"
             src={img1}
             alt="First slide"
-            height="650px"
-            width="350px"
           />
           <Carousel.Caption>
             <h3>Clean and Hygienic</h3>
@@ -26,8 +24,6 @@ const MyCarousel = () => {
             className="d-block w-100"
             src={img2}
             alt="Second slide"
-            height="650px"
-            width="350px"
           />
 
           <Carousel.Caption>
@@ -39,9 +35,7 @@ const MyCarousel = () => {
           <img
             className="d-block w-100"
             src={img3}
-            alt="Third slide"
-            height="650px"
-            width="350px"
+            alt="Third slide" 
           />
 
           <Carousel.Caption>

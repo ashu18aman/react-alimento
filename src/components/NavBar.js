@@ -75,6 +75,7 @@ const useStyles = makeStyles((theme) => {
     navLinks: {
       borderColor: "white",
       marginRight: "-24px",
+      textDecoration: "none",
     },
     navLinksText: {
       textDecoration: "none",
@@ -157,6 +158,8 @@ const useStyles = makeStyles((theme) => {
 const NavBar = () => {
   const classes = useStyles();
   const [left, setLeft] = useState(false);
+  const titleLinkText = {textDecoration: "none",color: "white",}
+  const drawerLinkText = {textDecoration: "none",color: "black",}
 
   const toggleDrawer =  (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -190,18 +193,18 @@ const NavBar = () => {
 
 							<ListItem>
 								<Typography className={classes.title} noWrap variant="h5">
-								<Link to="/" className={classes.titleLinkText}>Alimento</Link>
+								<Link to="/" style={titleLinkText}>Alimento</Link>
 								</Typography>
 							</ListItem>
 
               <ListItem>
-                <Link to="/" className={classes.headerLinksText}>
+                <Link to="/" style={titleLinkText}>
                   About
                 </Link>
               </ListItem>
 
               <ListItem>
-                <Link to="/" className={classes.headerLinksText}>
+                <Link to="/" style={titleLinkText}>
                   Menu
                 </Link>
               </ListItem>
@@ -221,14 +224,14 @@ const NavBar = () => {
           <List className={classes.navList}>
             <ListItem>
               <Button variant="outlined" className={classes.navLinks}>
-                <Link to="/" className={classes.navLinksText}>
+                <Link to="/" style={titleLinkText}>
                   SignUp
                 </Link>
               </Button>
             </ListItem>
             <ListItem>
               <Button variant="contained">
-                <Link to="/" className={classes.navLinksText}>
+                <Link to="/" style={titleLinkText}>
                   Login
                 </Link>
               </Button>
@@ -254,13 +257,13 @@ const NavBar = () => {
               <Divider />
 
               <ListItem>
-                <Link to="/" className={classes.drawerLinksText}>
+                <Link to="/" style={drawerLinkText}>
                   <InfoIcon className={classes.drawerIcon} />
                   About
                 </Link>
               </ListItem>
               <ListItem>
-                <Link to="/" className={classes.drawerLinksText}>
+                <Link to="/" style={drawerLinkText}>
                   <RestaurantMenuIcon className={classes.drawerIcon} />
                   Menu
                 </Link>

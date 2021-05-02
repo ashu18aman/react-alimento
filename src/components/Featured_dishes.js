@@ -5,16 +5,20 @@ import RecipeReviewCard from './Card';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import AddIcon from '@material-ui/icons/Add';
+import { Link } from 'react-router-dom';
+import { purple } from "@material-ui/core/colors";
 
 const useStyles = makeStyles({
     root: {
         marginTop: 15,
         width: '100%',
     },
-    add:{
-        height: 400,
-        width: 400,
+    addIcon:{
+        fontSize: 200,
     },
+    link: {
+        textDecoration: "none",
+    }
 });
 
 const Featured = () => {
@@ -22,7 +26,7 @@ const Featured = () => {
     return (
         <Container className={classes.root} >
             <Typography variant="h3" component="h3" align="center" gutterBottom>
-                FEATURED DISHES
+                Popular dishes.......
             </Typography>
             <Grid container direction="row"
                 justify="center"
@@ -43,10 +47,14 @@ const Featured = () => {
                     <RecipeReviewCard />
                 </Grid>
                 <Grid item>
-                    <AddIcon fontSize="large" className={classes.add} />
-                    <Typography variant="h4" component="h4" align="center" gutterBottom>
-                More 
-            </Typography>
+                    <Link style={{textDecoration:'none',color:'black'}}>
+                        <div style={{padding: '50px'}}>
+                            <AddIcon fontSize="large" className={classes.addIcon} />
+                            <Typography variant="h4" component="h4" align="center" gutterBottom>
+                                More 
+                            </Typography>
+                        </div>
+                    </Link>
                     
                 </Grid>
             </Grid>

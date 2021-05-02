@@ -12,6 +12,7 @@ const useStyles = makeStyles({
     root: { 
         marginTop: 15,
         width: '100%',
+        backgroundColor: 'purple',
     },
     grd:{
         marginTop: 25,
@@ -23,9 +24,14 @@ const Instant_order = () => {
     const classes = useStyles();
     return (
         <Container className="root">
-         <Typography variant="h3" component="h3" align="center" gutterBottom>
-                INSTANT ORDER
-            </Typography>
+            <div>
+                <Typography variant="h3" component="h3" align="center" gutterBottom>
+                        Check out our today's surprise meal !!!
+                </Typography>
+                <Typography variant="h5" component="h3" align="center" gutterBottom>
+                    Fill the below form and we will contact you shortly.... 
+                </Typography>
+            </div>
             <Grid container direction="row"
                 justify="center"
                 alignItems="center">
@@ -37,9 +43,9 @@ const Instant_order = () => {
                             <TextField
                                 margin="normal"
                                 id="outlined-multiline-static"
-                                label="Good Name"
+                                label="Name"
                                 multiline
-                                rows={4}
+                                rows={2}
                                 defaultValue="Default Value"
                                 variant="outlined"
                                 className="grd"
@@ -49,7 +55,7 @@ const Instant_order = () => {
                                 id="outlined-multiline-static"
                                 label="Email"
                                 multiline
-                                rows={4}
+                                rows={2}
                                 defaultValue="Default Value"
                                 variant="outlined"
                                 className="grd"
@@ -59,7 +65,7 @@ const Instant_order = () => {
                                 id="outlined-multiline-static"
                                 label="Address"
                                 multiline
-                                rows={4}
+                                rows={2}
                                 defaultValue="Default Value"
                                 variant="outlined"
                                 className="grd"
