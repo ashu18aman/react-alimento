@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar";
 import MyCarousel from "./components/MyCarousel";
 import "bootstrap/dist/css/bootstrap.css";
 import Featured from "./components/Featured_dishes"
+import Instant_order from "./components/Instant_order"
 
 const theme = createMuiTheme({
   
@@ -18,6 +19,7 @@ function App() {
         <NavBar />
         <MyCarousel />
         <Featured />
+        <Instant_order />
       </Router>
     </ThemeProvider>
   );
