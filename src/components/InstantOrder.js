@@ -12,7 +12,7 @@ import { CenterFocusStrong } from '@material-ui/icons';
 
 const useStyles = makeStyles({
     root: {
-        background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+        background: 'linear-gradient(45deg, #ff7043 30%, #ff7043 90%)',
         padding: 15,
         width: '100%',
     },
@@ -27,7 +27,7 @@ const useStyles = makeStyles({
         width:'100%',
         padding: 15,
         marginTop: 15,
-        background: 'linear-gradient(45deg, #ec407a 30%, #ec407a 90%)',
+        background: 'linear-gradient(45deg, #ec407a 30%,  #ec407a 90%)',
         justify:CenterFocusStrong,
         color: '#212121',
     },
