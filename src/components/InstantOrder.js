@@ -17,6 +17,9 @@ const useStyles = makeStyles({
     grd: {
         marginTop: 25,
     },
+    textInp: {
+        background: 'linear-gradient(45deg, #e8eaf6 30%, #e8eaf6 90%)',
+    },
 
 });
 
@@ -46,13 +49,13 @@ const InstantOrder = () => {
                                 alignItems="center"
                                 spacing={5}>
                             <Grid item>
-                            <TextField id="outlined-basic" label="Name" variant="outlined" />
+                            <TextField id="outlined-basic" label="Name" variant="outlined" className={classes.textInp} />
                                 </Grid>
                                 <Grid item>
-                                <TextField id="outlined-basic" label="Email" variant="outlined" />
+                                <TextField id="outlined-basic" label="Email" variant="outlined" className={classes.textInp} />
                                 </Grid>
                                 <Grid item>
-                                <TextField id="outlined-basic" label="Address" variant="outlined" />
+                                <TextField id="outlined-basic" label="Address" variant="outlined" className={classes.textInp} />
                                 </Grid>
                             </Grid>
 
