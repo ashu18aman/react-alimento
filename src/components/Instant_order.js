@@ -9,21 +9,21 @@ import { findByLabelText } from '@testing-library/dom';
 import purple from '@material-ui/core/colors/purple';
 
 const useStyles = makeStyles({
-    root: { 
+    root: {
         marginTop: 15,
         width: '100%',
     },
-    grd:{
+    grd: {
         marginTop: 25,
     },
-    
+
 });
 
 const Instant_order = () => {
     const classes = useStyles();
     return (
         <Container className="root">
-         <Typography variant="h3" component="h3" align="center" gutterBottom>
+            <Typography variant="h3" component="h3" align="center" gutterBottom>
                 INSTANT ORDER
             </Typography>
             <Grid container direction="row"
@@ -32,38 +32,50 @@ const Instant_order = () => {
                 <Grid item>
                     <Form>
                         <FormControl
-                        color="secondary"
+                            color="secondary"
                         >
-                            <TextField
-                                margin="normal"
-                                id="outlined-multiline-static"
-                                label="Good Name"
-                                multiline
-                                rows={4}
-                                defaultValue="Default Value"
-                                variant="outlined"
-                                className="grd"
-                            />
-                            <TextField
-                                margin="normal"
-                                id="outlined-multiline-static"
-                                label="Email"
-                                multiline
-                                rows={4}
-                                defaultValue="Default Value"
-                                variant="outlined"
-                                className="grd"
-                            />
-                            <TextField
-                                margin="normal"
-                                id="outlined-multiline-static"
-                                label="Address"
-                                multiline
-                                rows={4}
-                                defaultValue="Default Value"
-                                variant="outlined"
-                                className="grd"
-                            />
+                            <Grid
+                                container direction="row"
+                                justify="center"
+                                alignItems="center"
+                                spacing={5}>
+                            <Grid item>
+                                    <TextField
+                                        margin="normal"
+                                        id="outlined-multiline-static"
+                                        label="Good Name"
+                                        multiline
+                                        rows={4}
+                                        defaultValue="Default Value"
+                                        variant="outlined"
+                                        className="grd"
+                                    />
+                                </Grid>
+                                <Grid item>
+                                    <TextField
+                                        margin="normal"
+                                        id="outlined-multiline-static"
+                                        label="Email"
+                                        multiline
+                                        rows={4}
+                                        defaultValue="Default Value"
+                                        variant="outlined"
+                                        className="grd"
+                                    />
+                                </Grid>
+                                <Grid item>
+                                    <TextField
+                                        margin="normal"
+                                        id="outlined-multiline-static"
+                                        label="Address"
+                                        multiline
+                                        rows={4}
+                                        defaultValue="Default Value"
+                                        variant="outlined"
+                                        className="grd"
+                                    />
+                                </Grid>
+                            </Grid>
 
                         </FormControl>
                     </Form>
