@@ -24,7 +24,7 @@ const black = 'black';
 const useStyles = makeStyles((theme) => {
   return {
     navbar: {
-      backgroundColor: purple[500],
+      backgroundColor: '#ff8a65',
       color: "white",
       display: "flex",
     },
