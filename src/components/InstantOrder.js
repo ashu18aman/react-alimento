@@ -27,7 +27,7 @@ const useStyles = makeStyles({
         width:'100%',
         padding: 15,
         marginTop: 15,
-        background: 'linear-gradient(45deg, #ffecb3 30%, #ffecb3 90%)',
+        background: 'linear-gradient(45deg, #ec407a 30%, #ec407a 90%)',
         justify:CenterFocusStrong,
         color: '#212121',
     },
@@ -72,7 +72,7 @@ const InstantOrder = () => {
                         </FormControl>
                         <Button
                             variant="contained"
-                            color="primary"
+                            color="Secondary"
                             className={classes.sub}
                             endIcon={<SendOutlinedIcon />}
 
