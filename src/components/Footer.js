@@ -4,13 +4,9 @@ import { Container } from "@material-ui/core";
 
 const useStyles = makeStyles({
     footer: {
-        marginTop: '1rem',
-        padding: '1rem',
         backgroundColor: 'rgb(235, 195, 64)',
-        position: 'fixed',
-        bottom: '0',
-        left: '0',
         width: '100%',
+        padding: 15,
 
     },
 });
