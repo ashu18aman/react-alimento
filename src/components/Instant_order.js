@@ -40,40 +40,13 @@ const Instant_order = () => {
                                 alignItems="center"
                                 spacing={5}>
                             <Grid item>
-                                    <TextField
-                                        margin="normal"
-                                        id="outlined-multiline-static"
-                                        label="Good Name"
-                                        multiline
-                                        rows={4}
-                                        defaultValue="Default Value"
-                                        variant="outlined"
-                                        className="grd"
-                                    />
+                            <TextField id="outlined-basic" label="Name" variant="outlined" />
                                 </Grid>
                                 <Grid item>
-                                    <TextField
-                                        margin="normal"
-                                        id="outlined-multiline-static"
-                                        label="Email"
-                                        multiline
-                                        rows={4}
-                                        defaultValue="Default Value"
-                                        variant="outlined"
-                                        className="grd"
-                                    />
+                                <TextField id="outlined-basic" label="Email" variant="outlined" />
                                 </Grid>
                                 <Grid item>
-                                    <TextField
-                                        margin="normal"
-                                        id="outlined-multiline-static"
-                                        label="Address"
-                                        multiline
-                                        rows={4}
-                                        defaultValue="Default Value"
-                                        variant="outlined"
-                                        className="grd"
-                                    />
+                                <TextField id="outlined-basic" label="Address" variant="outlined" />
                                 </Grid>
                             </Grid>
 
