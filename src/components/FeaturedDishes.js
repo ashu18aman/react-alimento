@@ -8,11 +8,14 @@ import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
     root: {
-        marginTop: 15,
+        background: 'linear-gradient(45deg, #ffccbc 30%, #ffccbc 90%)',
+        paddingTop: 15,
         width: '100%',
     },
     addIcon:{
         fontSize: 200,
+        padding: 20,
+        margin: 41,
     },
     link: {
         textDecoration: "none",
