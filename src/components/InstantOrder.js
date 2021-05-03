@@ -21,9 +21,14 @@ const InstantOrder = () => {
     const classes = useStyles();
     return (
         <Container className="root">
-            <Typography variant="h3" component="h3" align="center" gutterBottom>
-                INSTANT ORDER
-            </Typography>
+            <div>
+                <Typography variant="h3" component="h3" align="center" gutterBottom>
+                    Check out our today's surprise meal !!!
+                </Typography>
+                <Typography variant="h5" component="h3" align="center" gutterBottom>
+                    Fill the below form and we will contact you shortly.... 
+                </Typography>
+            </div>
             <Grid container direction="row"
                 justify="center"
                 alignItems="center">
