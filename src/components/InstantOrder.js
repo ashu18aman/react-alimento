@@ -5,8 +5,6 @@ import { FormControl } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import { findByLabelText } from '@testing-library/dom';
-import purple from '@material-ui/core/colors/purple';
 
 const useStyles = makeStyles({
     root: {
@@ -19,7 +17,7 @@ const useStyles = makeStyles({
 
 });
 
-const Instant_order = () => {
+const InstantOrder = () => {
     const classes = useStyles();
     return (
         <Container className="root">
@@ -59,4 +57,4 @@ const Instant_order = () => {
     );
 }
 
-export default Instant_order;
+export default InstantOrder;

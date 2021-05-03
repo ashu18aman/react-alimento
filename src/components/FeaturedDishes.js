@@ -1,12 +1,10 @@
 import { Container, Grid } from '@material-ui/core';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import RecipeReviewCard from './Card';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import AddIcon from '@material-ui/icons/Add';
 import { Link } from 'react-router-dom';
-import { purple } from "@material-ui/core/colors";
 
 const useStyles = makeStyles({
     root: {
