@@ -8,7 +8,10 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
     root: {
+        background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
         marginTop: 15,
+        marginBottom: 15,
+        padding:15,
         width: '100%',
     },
     grd: {
@@ -20,7 +23,7 @@ const useStyles = makeStyles({
 const InstantOrder = () => {
     const classes = useStyles();
     return (
-        <Container className="root">
+        <Container className={classes.root}>
             <div>
                 <Typography variant="h3" component="h3" align="center" gutterBottom>
                     Check out our today's surprise meal !!!
