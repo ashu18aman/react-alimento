@@ -18,6 +18,7 @@ const useStyles = makeStyles({
         marginTop: 25,
     },
     textInp: {
+        width: 380,
         background: 'linear-gradient(45deg, #e8eaf6 30%, #e8eaf6 90%)',
     },
 
