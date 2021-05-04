@@ -1,11 +1,9 @@
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core';
 import NavBar from "./components/NavBar";
-import MyCarousel from "./components/MyCarousel";
 import "bootstrap/dist/css/bootstrap.css";
-import Featured from "./components/FeaturedDishes"
-import InstantOrder from "./components/InstantOrder"
-import Footer from "./components/Footer"
+import Home from "./Home"
+import Feedback from "./components/Feedback"
 
 const theme = createMuiTheme({
   
@@ -18,10 +16,8 @@ function App() {
     <ThemeProvider theme={theme}>
       <Router>
         <NavBar />
-        <MyCarousel />
-        <Featured />
-        <InstantOrder />
-        <Footer />
+        <Route exact path='/' component={Home} />
+        <Route path='/feedback' component={Feedback} />
       </Router>
     </ThemeProvider>
   );

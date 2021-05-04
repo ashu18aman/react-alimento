@@ -24,11 +24,12 @@ const useStyles = makeStyles({
         background: 'linear-gradient(45deg, #e8eaf6 30%, #e8eaf6 90%)',
     },
     sub: {
-        width:'100%',
+        width:'70%',
         padding: 15,
         marginTop: 15,
+        marginLeft: "15%",
+        marginRight: "30%",
         background: 'linear-gradient(45deg, #ec407a 30%,  #ec407a 90%)',
-        justify:CenterFocusStrong,
         color: '#212121',
     },
 
