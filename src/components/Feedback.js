@@ -4,7 +4,7 @@ import ContactMailIcon from '@material-ui/icons/ContactMail';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField'
 
-const Contact = () => {
+const Feedback = () => {
     return (
         <Container>
             <ContactMailIcon />
@@ -19,4 +19,4 @@ const Contact = () => {
     );
 }
 
-export default Contact;
+export default Feedback;
