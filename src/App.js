@@ -16,8 +16,10 @@ function App() {
     <ThemeProvider theme={theme}>
       <Router>
         <NavBar />
+        <Switch>
         <Route exact path='/' component={Home} />
         <Route path='/feedback' component={Feedback} />
+        </Switch>
       </Router>
     </ThemeProvider>
   );
