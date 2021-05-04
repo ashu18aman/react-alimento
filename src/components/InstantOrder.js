@@ -12,7 +12,9 @@ import { CenterFocusStrong } from '@material-ui/icons';
 
 const useStyles = makeStyles({
     root: {
-        background: 'linear-gradient(45deg, #ff7043 30%, #ff7043 90%)',
+        // background: 'linear-gradient(45deg,#FED54A 30%,#E1A2B8 90%)',
+        // background: 'linear-gradient(45deg,#FED54A 30%,#FF6666 90%)',
+        background: 'linear-gradient(45deg,#ac57f2 30%,#FED54A 75%)',
         padding: 15,
         width: '100%',
     },
@@ -22,13 +24,14 @@ const useStyles = makeStyles({
     textInp: {
         width: 380,
         background: 'linear-gradient(45deg, #e8eaf6 30%, #e8eaf6 90%)',
+        outline: 'none',
     },
     sub: {
         width:'100%',
         padding: 15,
-        marginTop: 15,
-        background: 'linear-gradient(45deg, #ec407a 30%,  #ec407a 90%)',
-        justify:CenterFocusStrong,
+        margin:'15px auto' ,
+        background: 'linear-gradient(45deg,#ff699f 30%,#ff699f 90%)',
+        placeItems: 'center',
         color: '#212121',
     },
 
@@ -75,10 +78,9 @@ const InstantOrder = () => {
                             color="Secondary"
                             className={classes.sub}
                             endIcon={<SendOutlinedIcon />}
-
                         >
                             Order Now
-      </Button>
+                        </Button>
                     </Form>
                 </Grid>
             </Grid>

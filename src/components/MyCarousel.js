@@ -7,7 +7,7 @@ import img3 from "./Images/thali.jpg";
 const MyCarousel = () => {
   return (
     <div>
-      <Carousel interval={3000} fade="true" controls={false}>
+      <Carousel interval={3000} fade={true} controls={false}>
         <Carousel.Item>
           <img
             className="d-block w-100"

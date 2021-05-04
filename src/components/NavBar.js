@@ -24,7 +24,7 @@ const black = 'black';
 const useStyles = makeStyles((theme) => {
   return {
     navbar: {
-      backgroundColor: '#ff8a65',
+      backgroundColor: '#FF9F4A',
       color: "white",
       display: "flex",
     },
@@ -97,8 +97,9 @@ const useStyles = makeStyles((theme) => {
       },
     },
     searchIcon: {
-      padding: theme.spacing(0.5, 2),
+      // padding: theme.spacing(0.5, 2),
       pointerEvents: "none",
+      width:'10px',
       color: black,
     },
     searchInput: {
@@ -141,7 +142,7 @@ const useStyles = makeStyles((theme) => {
     },
     drawerSearchIcon: {
       fontSize: '3px',
-      marginRight: '11px',
+      marginLeft: '-20px',
       pointerEvents: "none",
       color: black,
     },
@@ -213,9 +214,11 @@ const NavBar = () => {
           </div>
 
           {/* Search Bar */}
-          <div className={classes.searchBar}>
-            <div className={classes.searchIcon}>
-              <SearchOutlined />
+          <div className={classes.searchBar} onClick={e => console.log('click')}>
+            <div>
+              <Button className={classes.searchIcon}>
+                <SearchOutlined />
+              </Button>
             </div>
             <InputBase placeholder="Search…" className={classes.searchInput} />
           </div>
@@ -272,10 +275,10 @@ const NavBar = () => {
 
           <Divider />
 
-          <div className={classes.drawerSearchBar}>
-            <div className={classes.drawerSearchIcon}>
-              <SearchOutlined />
-            </div>
+          <div className={classes.drawerSearchBar} onClick={e => console.log('click')}>
+              <Button className={classes.drawerSearchIcon}>
+                <SearchOutlined />
+              </Button>
             <InputBase placeholder="Search…" />
           </div>
       </Drawer>
