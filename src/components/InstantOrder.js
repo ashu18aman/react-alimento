@@ -13,8 +13,8 @@ import { CenterFocusStrong } from '@material-ui/icons';
 const useStyles = makeStyles({
     root: {
         // background: 'linear-gradient(45deg,#FED54A 30%,#E1A2B8 90%)',
-        // background: 'linear-gradient(45deg,#FED54A 30%,#FF6666 90%)',
-        background: 'linear-gradient(45deg,#ac57f2 30%,#FED54A 75%)',
+        // background: 'linear-gradient(45deg,#FD297A 10%, #9424F0 70%)',
+        background: 'linear-gradient(45deg,#ac57f2 30%,#3edbf0 95%)',
         padding: 15,
         width: '100%',
     },
@@ -26,12 +26,18 @@ const useStyles = makeStyles({
         background: 'linear-gradient(45deg, #e8eaf6 30%, #e8eaf6 90%)',
         outline: 'none',
     },
+    addrInp: {
+        width: '100%', //change here
+        background: 'linear-gradient(45deg, #e8eaf6 30%, #e8eaf6 90%)',
+        outline: 'none',
+    },
     sub: {
-        width:'100%',
+        width:'70%',
         padding: 15,
-        margin:'15px auto' ,
+        marginTop: 15,
+        marginLeft: "15%",
+        marginRight: "30%",
         background: 'linear-gradient(45deg,#ff699f 30%,#ff699f 90%)',
-        placeItems: 'center',
         color: '#212121',
     },
 
@@ -69,7 +75,7 @@ const InstantOrder = () => {
                                     <TextField id="outlined-basic" label="Email" variant="outlined" className={classes.textInp} />
                                 </Grid>
                                 <Grid item>
-                                    <TextField id="outlined-basic" label="Address" variant="outlined" className={classes.textInp} />
+                                    <TextField id="outlined-basic" label="Address" variant="outlined" className={[classes.textInp,classes.addrInp]} />
                                 </Grid>
                             </Grid>
                         </FormControl>

@@ -17,6 +17,7 @@ import Divider from '@material-ui/core/Divider';
 import SearchOutlined from "@material-ui/icons/SearchOutlined";
 import RestaurantMenuIcon from '@material-ui/icons/RestaurantMenu';
 import InfoIcon from '@material-ui/icons/Info';
+import FeedbackIcon from '@material-ui/icons/Feedback';
 
 //color variable
 const black = 'black';
@@ -172,9 +173,8 @@ const NavBar = () => {
   };
 
   return (
-    <div>
+    <div position="sticky">
       <AppBar
-        position="sticky"
         elevation={2}
         className={[classes.navbar, classes.whiteColor]}
       >
@@ -207,6 +207,12 @@ const NavBar = () => {
               <ListItem>
                 <Link to="/" style={titleLinkText}>
                   Menu
+                </Link>
+              </ListItem>
+
+              <ListItem>
+                <Link to="/feedback" style={titleLinkText}>
+                  Feedback
                 </Link>
               </ListItem>
 
@@ -269,6 +275,12 @@ const NavBar = () => {
                 <Link to="/" style={drawerLinkText}>
                   <RestaurantMenuIcon className={classes.drawerIcon} />
                   Menu
+                </Link>
+              </ListItem>
+              <ListItem>
+                <Link to="/feedback" style={drawerLinkText}>
+                  <FeedbackIcon className={classes.drawerIcon} />
+                  Feedback
                 </Link>
               </ListItem>
           </List>

@@ -1,6 +1,9 @@
-/* html{
-  filter: invert(1) hue-rotate(180deg);
-} */
+html{
+  /* filter: invert(1) hue-rotate(180deg); */
+  width:100%;
+  overflow-x: hidden;
+  margin:0;
+}
 
 body {
   margin: 0;
@@ -14,6 +17,11 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* MyCarousel */
+.slider-image{
+  height:100vh;
 }
 
 @media (max-width:700px){
