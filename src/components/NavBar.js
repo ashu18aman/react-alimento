@@ -28,6 +28,12 @@ const useStyles = makeStyles((theme) => {
       backgroundColor: '#FF9F4A',
       color: "white",
       display: "flex",
+      // marginLeft:'-20px',
+      // maxWidth:1200,
+      maxWidth:'100vw',
+      paddingLeft:'20px',
+      paddingRight:'20px',
+      marginLeft:'-10px',
     },
     menuIcon: {
       transition: theme.transitions.create("opacity", { duration: "0.3s" }),
@@ -44,8 +50,9 @@ const useStyles = makeStyles((theme) => {
     },
     header: {
       display: "flex",
-      flexGrow: 1,
-      marginLeft: "-30px",
+      // flexGrow: 1,
+      marginLeft: "-44px",
+      marginRight: "auto",
       [theme.breakpoints.down("sm")]: {
         marginLeft: "-10px",
       },
@@ -53,7 +60,7 @@ const useStyles = makeStyles((theme) => {
     headerList: {
       display: "flex",
       [theme.breakpoints.down("md")]: {
-        marginRight: "-92px",
+        marginRight: "-122px",
       },
     },
     headerLinksText: {
@@ -68,6 +75,7 @@ const useStyles = makeStyles((theme) => {
       color: "white",
     },
     whiteColor: {
+      backgroundColor: '#FF9F4A',
       color: "white",
     },
     navList: {
@@ -91,7 +99,9 @@ const useStyles = makeStyles((theme) => {
       width: "auto",
       marginRight: "10px",
       [theme.breakpoints.down("md")]: {
-        marginRight: "-12px",
+        marginRight: "-6px",
+        marginLeft: "6px",
+        width:"200px",
       },
       [theme.breakpoints.down("xs")]: {
         display: "none",
@@ -113,6 +123,11 @@ const useStyles = makeStyles((theme) => {
           width: "40ch",
         },
       },
+    },
+    rightSide:{
+      display: "flex",
+      justifyContent: "center",
+      alignItems:"center",
     },
     drawer: {
       width: '300px',
@@ -153,6 +168,9 @@ const useStyles = makeStyles((theme) => {
     },
     avatar: {
       margin: '20px 10px 20px 0',
+    },
+    appbar:{
+      width:'100vw',
     }
   };
 });
@@ -167,16 +185,15 @@ const NavBar = () => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;
     }
-
     setLeft(!left);
     console.log(left)
   };
 
   return (
-    <div position="sticky">
+    <div position="sticky" className={[classes.navbar,classes.appbar]}>
       <AppBar
         elevation={2}
-        className={[classes.navbar, classes.whiteColor]}
+        className={[classes.whiteColor]}
       >
         <Toolbar>
           {/* Navigation Icon */}
@@ -199,19 +216,19 @@ const NavBar = () => {
 							</ListItem>
 
               <ListItem>
-                <Link to="/" style={titleLinkText}>
+                <Link to="/" style={titleLinkText} className="linkText">
                   About
                 </Link>
               </ListItem>
 
               <ListItem>
-                <Link to="/" style={titleLinkText}>
+                <Link to="/" style={titleLinkText} className="linkText">
                   Menu
                 </Link>
               </ListItem>
 
               <ListItem>
-                <Link to="/feedback" style={titleLinkText}>
+                <Link to="/feedback" style={titleLinkText} className="linkText">
                   Feedback
                 </Link>
               </ListItem>
@@ -219,34 +236,37 @@ const NavBar = () => {
             </List>
           </div>
 
-          {/* Search Bar */}
-          <div className={classes.searchBar} onClick={e => console.log('click')}>
-            <div>
-              <Button className={classes.searchIcon}>
-                <SearchOutlined />
-              </Button>
-            </div>
-            <InputBase placeholder="Search…" className={classes.searchInput} />
-          </div>
 
-          {/* Buttons */}
-          <List className={classes.navList}>
-            <ListItem>
-              <Button variant="outlined" className={classes.navLinks}>
-                <Link to="/" style={titleLinkText}>
-                  SignUp
-                </Link>
-              </Button>
-            </ListItem>
-            <ListItem>
-              <Button variant="contained">
-                <Link to="/" style={titleLinkText}>
-                  Login
-                </Link>
-              </Button>
-            </ListItem>
-          </List>
-        </Toolbar>
+          <div className={classes.rightSide}>
+          {/* Search Bar */}
+              <div className={classes.searchBar} onClick={e => console.log('click')}>
+                <div>
+                  <Button className={classes.searchIcon}>
+                    <SearchOutlined />
+                  </Button>
+                </div>
+                <InputBase placeholder="Search…" className={classes.searchInput} />
+              </div>
+
+              {/* Buttons */}
+              <List className={classes.navList}>
+                <ListItem>
+                  <Button variant="outlined" className={classes.navLinks}>
+                    <Link to="/" style={titleLinkText}>
+                      SignUp
+                    </Link>
+                  </Button>
+                </ListItem>
+                <ListItem>
+                  <Button variant="contained">
+                    <Link to="/" style={titleLinkText}>
+                      Login
+                    </Link>
+                  </Button>
+                </ListItem>
+              </List>
+            </div>
+          </Toolbar>
       </AppBar>
 
       {/* Drawer */}

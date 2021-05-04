@@ -13,7 +13,9 @@ const useStyles = makeStyles({
         width: '100%',
         padding: 15,
         justify: 'center',
-
+        paddingBottom: 0,
+        marginLeft:0,
+        marginRight:0,
     },
 });
 

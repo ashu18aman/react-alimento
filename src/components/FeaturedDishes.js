@@ -11,6 +11,8 @@ const useStyles = makeStyles({
         background: 'linear-gradient(135deg, #ff9d85 20%, #FED54A 60%)',
         paddingTop: 15,
         width: '100%',
+        marginLeft:0,
+        marginRight:0,
     },
     addIcon:{
         fontSize: 200,

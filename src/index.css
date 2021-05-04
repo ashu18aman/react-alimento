@@ -3,6 +3,7 @@ html{
   width:100%;
   overflow-x: hidden;
   margin:0;
+  padding:0;
 }
 
 body {
@@ -20,11 +21,26 @@ code {
 }
 
 /* MyCarousel */
-.slider-image{
-  height:100vh;
+/* .slider-image{
+  height:50vh;
+} */
+
+/* .testimonial{
+  height:200px;
+  width:80vw;
+  margin:auto;
+} */
+
+.home{
+  width:100vw;
 }
 
-@media (max-width:700px){
+/* .appbar{
+  width:100vw;
+} */
+
+
+@media (max-width:1000px){
   .linkText{
     display: none;
   }

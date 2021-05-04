@@ -2,8 +2,9 @@ import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core';
 import NavBar from "./components/NavBar";
 import "bootstrap/dist/css/bootstrap.css";
-import Home from "./Home"
-import Feedback from "./components/Feedback"
+import Home from "./Home";
+import Feedback from "./components/Feedback";
+import "../src/index.css";
 
 const theme = createMuiTheme({
   

@@ -1,4 +1,3 @@
-import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 import img1 from "./Images/restaurant-view.jpg";
 import img2 from "./Images/snacks.jpg";
@@ -6,15 +5,15 @@ import img3 from "./Images/thali.jpg";
 
 const MyCarousel = () => {
   return (
-    <div>
+    <div >
       <Carousel interval={3000} fade={true} controls={false}>
         <Carousel.Item>
           <img
             className="d-block w-100 silder-image"
             src={img2}
             alt="Second slide"
-            // height="650px"
-            // width="350px"
+            height="650px"
+            width="350px"
           />
           <Carousel.Caption>
             <h3>Snacks</h3>
@@ -27,8 +26,8 @@ const MyCarousel = () => {
             className="d-block w-100 silder-image"
             src={img1}
             alt="First slide"
-            // height="650px"
-            // width="350px"
+            height="650px"
+            width="350px"
           />
           <Carousel.Caption>
             <h3>Clean and Hygienic</h3>
@@ -41,8 +40,8 @@ const MyCarousel = () => {
             className="d-block w-100 silder-image"
             src={img3}
             alt="Third slide"
-            // height="650px"
-            // width="350px"
+            height="650px"
+            width="350px"
           />
           <Carousel.Caption>
             <h3>Thali</h3>

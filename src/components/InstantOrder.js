@@ -14,9 +14,11 @@ const useStyles = makeStyles({
     root: {
         // background: 'linear-gradient(45deg,#FED54A 30%,#E1A2B8 90%)',
         // background: 'linear-gradient(45deg,#FD297A 10%, #9424F0 70%)',
-        background: 'linear-gradient(45deg,#ac57f2 30%,#3edbf0 95%)',
+        background: 'linear-gradient(45deg,#ac57f2 25%,#3edbf0 95%)',
         padding: 15,
-        width: '100%',
+        width: '100vw',
+        marginLeft:0,
+        marginRight:0,
     },
     grd: {
         marginTop: 25,
