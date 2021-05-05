@@ -190,10 +190,12 @@ const NavBar = () => {
   };
 
   return (
-    <div position="sticky" className={[classes.navbar,classes.appbar]}>
+    <div position="sticky" className={[classes.navbar,classes.appbar]} disableGutters 
+    >
       <AppBar
         elevation={2}
         className={[classes.whiteColor]}
+        style={{maxWidth:'100vw',position:'fixed',left:0,}}
       >
         <Toolbar>
           {/* Navigation Icon */}
