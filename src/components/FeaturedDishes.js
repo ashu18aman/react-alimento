@@ -35,7 +35,12 @@ const Featured = () => {
             </Typography>
             <Grid container direction="row"
                 justify="center"
-                alignItems="center">
+                alignItems="center"
+                style={{
+                    margin: 0,
+                    width: '100%',
+                  }}    
+            >
                 <Grid item>
                     <RecipeReviewCard />
                 </Grid>

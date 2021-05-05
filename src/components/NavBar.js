@@ -129,10 +129,10 @@ const useStyles = makeStyles((theme) => {
       justifyContent: "center",
       alignItems:"center",
     },
-    drawer: {
-      width: '300px',
-      display: 'flex',
-    },
+    // drawer: {
+    //   width: '300px',
+    //   display: 'flex',
+    // },
     drawerPaper: {
       width: '300px',
     },
@@ -190,7 +190,7 @@ const NavBar = () => {
   };
 
   return (
-    <div position="sticky" className={[classes.navbar,classes.appbar]} disableGutters 
+    <div position="sticky" className={[classes.navbar,classes.appbar]} disableGutters={true} 
     >
       <AppBar
         elevation={2}
@@ -276,8 +276,7 @@ const NavBar = () => {
         anchor = "left" 
         open = {left} 
         onClose = { toggleDrawer }
-        className = {classes.drawer}
-        classes = {{ paper: classes.drawerPaper }}
+        classNAme={classes.drawerPaper}
       >
           <List>
               <ListItem>
