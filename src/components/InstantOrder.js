@@ -7,13 +7,10 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import SendOutlinedIcon from '@material-ui/icons/SendOutlined';
-import { CenterFocusStrong } from '@material-ui/icons';
 
 
 const useStyles = makeStyles({
     root: {
-        // background: 'linear-gradient(45deg,#FED54A 30%,#E1A2B8 90%)',
-        // background: 'linear-gradient(45deg,#FD297A 10%, #9424F0 70%)',
         background: 'linear-gradient(45deg,#ac57f2 25%,#3edbf0 95%)',
         padding: 15,
         width: '100vw',
@@ -29,7 +26,7 @@ const useStyles = makeStyles({
         outline: 'none',
     },
     addrInp: {
-        width: '100%', //change here
+        width: '100%',
         background: 'linear-gradient(45deg, #e8eaf6 30%, #e8eaf6 90%)',
         outline: 'none',
     },
@@ -48,7 +45,7 @@ const useStyles = makeStyles({
 const InstantOrder = () => {
     const classes = useStyles();
     return (
-        <Container className={classes.root}>
+        <div className={classes.root}>
             <div>
                 <Typography variant="h3" component="h3" align="center" gutterBottom>
                     Check out our today's surprise meal !!!
@@ -93,7 +90,7 @@ const InstantOrder = () => {
                 </Grid>
             </Grid>
 
-        </Container >
+        </div >
     );
 }
 

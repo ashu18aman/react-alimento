@@ -22,7 +22,7 @@ const useStyles = makeStyles({
 const Footer = () => {
     const classes = useStyles();
     return (
-        <Container className={classes.footer}>
+        <div className={classes.footer}>
             <Grid
                 container direction="row"
                 justify="center"
@@ -50,7 +50,7 @@ const Footer = () => {
                     <LinkedInIcon />
                 </Grid>
             </Grid>
-        </Container>
+        </div>
     );
 }
 
