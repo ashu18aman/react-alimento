@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 const useStyles = makeStyles({
     root: {
         background: 'linear-gradient(135deg, #ff9d85 20%, #FED54A 60%)',
+        color: "white",
         paddingTop: 15,
         width: '100%',
         marginLeft: 0,

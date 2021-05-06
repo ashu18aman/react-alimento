@@ -9,7 +9,8 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
     footer: {
-        backgroundColor: '#23C4ED',
+        backgroundColor: '#3081f2',
+        color: "white",
         width: '100%',
         padding: 15,
         justify: 'center',
