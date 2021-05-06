@@ -20,19 +20,6 @@ code {
     monospace;
 }
 
-/* MyCarousel */
-/* .slider-image{
-  height:50vh;
-} */
-
-/* .testimonial{
-  height:200px;
-  width:80vw;
-  margin:auto;
-} */
-
-
-
 #root{
   overflow-x: clip;
 }

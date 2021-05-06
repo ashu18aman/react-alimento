@@ -43,8 +43,12 @@ const useStyles = makeStyles((theme) => {
         marginRight: 20,
         paddingRight: 20,
     },
+    txtArea: {
+        margin:"15px 0 20px",
+    },
     send:{
         width:"100%",
+        margin:"auto",
     },
 }});
 
@@ -62,7 +66,7 @@ const Feedback = () => {
             <div className={classes.grd}>
                 <Grid container spacing={3}>
                     <Grid item xs={12} md={6}>
-                        <TextField required label=" Full Name" fullWidth />
+                        <TextField required label=" Name" fullWidth />
                     </Grid>
                     <Grid item xs={12} md={6}>
                         <TextField
@@ -72,10 +76,10 @@ const Feedback = () => {
                         />
                     </Grid>
                     <Grid item xs={12} md={6}>
-                        <TextField required label="Yours City" fullWidth />
+                        <TextField required label="City" fullWidth />
                     </Grid>
                     <Grid item xs={12} md={6}>
-                        <TextField required label="Yours Age" fullWidth />
+                        <TextField required label="Age" fullWidth />
                     </Grid>
                     <Grid item xs={12} md={6}>
                         <FormControl component="fieldset">
@@ -86,6 +90,18 @@ const Feedback = () => {
                                 <FormControlLabel value="other" control={<Radio />} label="Other" />
                             </RadioGroup>
                         </FormControl>
+                        
+                        <TextField
+                            variant="outlined"
+                            required
+                            label="Any Remark"
+                            fullWidth
+                            multiline
+                            rows={4}
+                            autoComplete="cc-csc"
+                            className={classes.txtArea}
+                        />
+
                     </Grid>
                     <Grid item xs={12} md={6}>
                         <FormControl component="fieldset">
@@ -99,16 +115,9 @@ const Feedback = () => {
                             </RadioGroup>
                         </FormControl>
                     </Grid>
-                    <Grid item xs={12} md={6}>
-                        <TextField
-                            required
-                            label="Any Remark"
-                            helperText="Last three digits on signature strip"
-                            fullWidth
-                            autoComplete="cc-csc"
-                        />
-                    </Grid>
-                    <Grid item xs={12} md={6}>
+                    {/* <Grid item xs={12} md={6}>
+                    </Grid> */}
+                    <Grid item xs={12} md={6} className={classes.send}>
                         <Button
                             variant="contained"
                             color="primary"
