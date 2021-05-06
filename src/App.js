@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import Home from "./Home";
 import Feedback from "./components/Feedback";
 import "../src/index.css";
+import Footer from "./components/Footer"
 
 const theme = createMuiTheme({
   
@@ -25,6 +26,7 @@ function App() {
             <Feedback />
           </Route>
         </Switch>
+        <Footer />
       </Router>
     </ThemeProvider>
   );
