@@ -11,14 +11,11 @@ const useStyles = makeStyles(() => {
   return {
     heading: {
       textAlign: "center",
-      marginTop: "20px",
-      marginBottom: "40px",
-    },
-    form: {
-      textAlign: "center",
+      marginTop: 20,
+      marginBottom: 40,
     },
     textarea: {
-      marginTop: "-40px",
+      marginTop: -40,
     },
   };
 });
@@ -63,8 +60,9 @@ const Login = () => {
         <Grid item>
           <Button
             className={classes.button}
-            color="primary"
+            color="secondary"
             variant="contained"
+            size="medium"
           >
             Submit
           </Button>

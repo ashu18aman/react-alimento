@@ -271,7 +271,7 @@ const NavBar = () => {
               </ListItem>
               <ListItem>
                 <Button variant="contained">
-                  <Link to="/" style={titleLinkText}>
+                  <Link to="/login" style={titleLinkText}>
                     Login
                   </Link>
                 </Button>

@@ -22,6 +22,9 @@ function App() {
           <Route path="/feedback">
             <Feedback />
           </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
         </Switch>
         <Footer />
       </Router>
