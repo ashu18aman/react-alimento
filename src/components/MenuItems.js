@@ -1,5 +1,5 @@
 {
-    "menu" : [
+    "menuItem" : [
         { 
             "imgUrl": "components/Images/soup1.jpg",
             "DishName": "Won Ton Soup with Chicken",
