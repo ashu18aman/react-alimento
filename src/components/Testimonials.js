@@ -1,37 +1,119 @@
 import Carousel from "react-bootstrap/Carousel";
+import { makeStyles,} from "@material-ui/core";
+import Typography from "@material-ui/core/Typography";
+import FormatQuoteIcon from '@material-ui/icons/FormatQuote';
 
 const testimonial = [
   {
     content:
-      'Over all though it was a great experience and we have had lots of great feedback. We already started promoting our next event and I have been approached by 4 other companies who want to know more about it as they want to use it for their own events.',
+      `   Over all though it was a great experience and we have had lots of great feedback. We already started promoting our next event and I have been approached by 4 other companies who want .`,
     author: 'Sarah M., Director of Events',
 
   },
   {
     content:
-      'I cannot tell you how much we loved using this silent auction software. Everything was seamless…from set up, to bidding, to payment. We will absolutely use MyEvent next year.',
-    author: 'Sarah M., CCHS Foundation',
+      `   I cannot tell you how much we loved using this silent auction software. Everything was seamless…from set up, to bidding, to payment. We will absolutely use MyEvent next year.`,
+    author: 'Henry M., CCHS Foundation',
 
   },
   {
     content:
-      "I tried MyEvent instead of typical paper raffle tickets. The system was easy to set up online and people who couldn't attend the event were still able to enter the raffle, which was HUGE bump in revenue.",
+      `   I tried MyEvent instead of typical paper raffle tickets. The system was easy to set up online and people who couldn't attend the event were still able to enter the raffle, which was HUGE bump in revenue.`,
     author: 'Alexander B., Pan-Mass Challenge',
 
   },
   {
     content:
-      'MyEvent is a great way to bring in money for your Fund A Need. The 24/7 tech support allows you to feel confident, and the platform makes your Fund a Need so much easier to run. Well definitely be using MyEvent again.',
-    author: 'Amy C., One Less Orphan Fund',
+      `     MyEvent is a great way to bring in money for your Fund A Need. The 24/7 tech support allows you to  a Need so much easier to run. Well definitely be using MyEvent again.`,
+     author: 'Amy C., One Less Orphan Fund',
 
   },
 ]
 
 
+
+const useStyles = makeStyles(theme => {
+  return {
+    root: {
+      width:"100%",
+      padding:30,
+      background: 'linear-gradient(135deg,#ac57f2 25%,#3edbf0 85%)',
+    },
+    heading: {
+      color: "white",
+      [theme.breakpoints.down("sm")]: {
+        fontSize: "2.4rem",
+      }
+    },
+    box: {
+      marginTop: 40,
+    },
+    slides: {
+        // height: 350, 
+        width: "60%", 
+        margin: "auto", 
+        color: "white" ,
+        marginBottom: 140,
+    },
+    quote: {
+        fontSize: "1.3rem",
+        largeTop:10,
+        [theme.breakpoints.down("sm")]: {
+           fontSize: "1rem",
+        },
+    },
+    startQuote: {
+      fontSize: "1.1rem",
+      marginBottom: 12,
+      [theme.breakpoints.down("sm")]: {
+          fontSize: "0.9rem",
+      },
+    },
+    endQuote: {
+      marginLeft:"10px",
+      marginBottom: 15,
+      fontSize: "1.1rem",
+      [theme.breakpoints.down("sm")]: {
+          fontSize: "0.9rem",
+      },
+    },
+    quoteFrom: {
+      marginTop: 35,
+    }
+  };
+});
+
+
+
 const Testimonials = () => {
+  
+  const classes = useStyles();
+
   return (
-    <div classname="testimonial">
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam vel et quo iure dolorem voluptas id. Laborum autem ipsum aliquam minus, iusto dolore dolorem inventore, commodi esse ducimus itaque tenetur odit dolorum perferendis, numquam ipsa nobis. Doloribus nobis error deleniti corrupti hic aliquid ducimus dignissimos doloremque eaque recusandae distinctio fugit, autem alias eum temporibus adipisci eos architecto consequatur facilis magni ipsum tenetur? In magni aperiam adipisci qui natus reiciendis ad, corrupti rerum impedit ratione ut consequuntur asperiores voluptas aut beatae? Sequi vel explicabo tempora obcaecati eos, veniam aut, quia omnis officia quaerat necessitatibus asperiores cumque exercitationem dolorem, tenetur reprehenderit facilis? Pariatur praesentium, voluptates dolorum, distinctio laborum voluptatibus sapiente numquam illo recusandae expedita saepe a eligendi alias modi dignissimos aliquam quam doloremque reiciendis fugiat quod exercitationem repellat voluptate facilis natus. Neque iure optio perferendis magni at! Cum deleniti autem, aperiam sunt nemo odio modi recusandae veritatis ut sapiente blanditiis iusto. Dolorum, quae voluptates! Quasi ducimus veritatis exercitationem voluptatem vel optio fugiat ipsum nihil nemo! Aliquam autem architecto laborum. Esse beatae illo dolorum quam quas iure possimus itaque facilis voluptatum mollitia non repellat, incidunt adipisci, blanditiis voluptate perferendis, soluta facere. Hic laborum itaque laboriosam eum optio similique voluptatum eius sint, esse nulla!
+    <div className={classes.root}>
+      <Typography variant="h3" align="center" className={classes.heading}>
+        Reviews......
+      </Typography>
+      <Carousel interval={90000} indicators={false} className={classes.box}>
+        {testimonial.map((c, index) => {
+          return (
+            <Carousel.Item interval={5000}>
+              <div  className={classes.slides}>
+                <p>
+                  <FormatQuoteIcon className={classes.startQuote}/>
+                    <span className={classes.quote}>
+                      {c.content}
+                    </span>
+                  <FormatQuoteIcon className={classes.endQuote} />
+                </p>
+                <Carousel.Caption>
+                  <p className={classes.quoteFrom}>- {c.author} </p>
+                </Carousel.Caption>
+              </div>
+            </Carousel.Item>
+          );
+        })}
+      </Carousel>
     </div>
   )
 }

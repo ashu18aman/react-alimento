@@ -5,12 +5,12 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import AddIcon from '@material-ui/icons/Add';
 import { Link } from 'react-router-dom';
-import CssBaseline from '@material-ui/core/CssBaseline';
 
 
 const useStyles = makeStyles({
     root: {
         background: 'linear-gradient(135deg, #ff9d85 20%, #FED54A 60%)',
+        color: "white",
         paddingTop: 15,
         width: '100%',
         marginLeft: 0,

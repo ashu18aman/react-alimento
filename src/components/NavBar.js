@@ -22,7 +22,7 @@ import FeedbackIcon from "@material-ui/icons/Feedback";
 //color variable
 const black = "black";
 
-const useStyles = makeStyles((theme) => {
+const useStyles = makeStyles(theme => {
   return {
     navbar: {
       backgroundColor: "#FF9F4A",
