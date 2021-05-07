@@ -133,7 +133,7 @@ const useStyles = makeStyles(theme => {
     //   display: 'flex',
     // },
     drawerPaper: {
-      width: "300px",
+      width: "50%",
     },
     drawerLinksText: {
       textDecoration: "none",
@@ -282,11 +282,12 @@ const NavBar = () => {
       </AppBar>
 
       {/* Drawer */}
-      <Drawer
-        anchor="left"
-        open={left}
-        onClose={toggleDrawer}
-        classNAme={classes.drawerPaper}
+      <Drawer 
+        anchor = "left" 
+        open = {left} 
+        onClose = { toggleDrawer }
+        className = {classes.drawer}
+        classes = {{ paper: classes.drawerPaper }}
       >
         <List>
           <ListItem>
