@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {  makeStyles } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
 import InputBase from "@material-ui/core/InputBase";
 import Button from "@material-ui/core/Button";
 import List from "@material-ui/core/List";
@@ -11,43 +11,42 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import { purple } from "@material-ui/core/colors";
 import { Link } from "react-router-dom";
-import Avatar from '@material-ui/core/Avatar';
-import Drawer from '@material-ui/core/Drawer';
-import Divider from '@material-ui/core/Divider';
+import Avatar from "@material-ui/core/Avatar";
+import Drawer from "@material-ui/core/Drawer";
+import Divider from "@material-ui/core/Divider";
 import SearchOutlined from "@material-ui/icons/SearchOutlined";
-import RestaurantMenuIcon from '@material-ui/icons/RestaurantMenu';
-import InfoIcon from '@material-ui/icons/Info';
-import FeedbackIcon from '@material-ui/icons/Feedback';
+import RestaurantMenuIcon from "@material-ui/icons/RestaurantMenu";
+import InfoIcon from "@material-ui/icons/Info";
+import FeedbackIcon from "@material-ui/icons/Feedback";
 
 //color variable
-const black = 'black';
+const black = "black";
 
 const useStyles = makeStyles((theme) => {
   return {
     navbar: {
-      backgroundColor: '#FF9F4A',
+      backgroundColor: "#FF9F4A",
       color: "white",
       display: "flex",
       // marginLeft:'-20px',
       // maxWidth:1200,
-      maxWidth:'100vw',
-      paddingLeft:'20px',
-      paddingRight:'20px',
-      marginLeft:'-10px',
+      maxWidth: "100vw",
+      paddingLeft: "20px",
+      paddingRight: "20px",
+      marginLeft: "-10px",
     },
     menuIcon: {
       transition: theme.transitions.create("opacity", { duration: "0.3s" }),
       opacity: 0,
       cursor: "default",
-      pointerEvents: 'none',
+      pointerEvents: "none",
       [theme.breakpoints.down("sm")]: {
         opacity: 1,
         cursor: "pointer",
-        pointerEvents: 'auto',
+        pointerEvents: "auto",
       },
     },
-    title: {
-    },
+    title: {},
     header: {
       display: "flex",
       // flexGrow: 1,
@@ -75,7 +74,7 @@ const useStyles = makeStyles((theme) => {
       color: "white",
     },
     whiteColor: {
-      backgroundColor: '#FF9F4A',
+      backgroundColor: "#FF9F4A",
       color: "white",
     },
     navList: {
@@ -101,7 +100,7 @@ const useStyles = makeStyles((theme) => {
       [theme.breakpoints.down("md")]: {
         marginRight: "-6px",
         marginLeft: "6px",
-        width:"200px",
+        width: "200px",
       },
       [theme.breakpoints.down("xs")]: {
         display: "none",
@@ -110,7 +109,7 @@ const useStyles = makeStyles((theme) => {
     searchIcon: {
       // padding: theme.spacing(0.5, 2),
       pointerEvents: "none",
-      width:'10px',
+      width: "10px",
       color: black,
     },
     searchInput: {
@@ -124,30 +123,30 @@ const useStyles = makeStyles((theme) => {
         },
       },
     },
-    rightSide:{
+    rightSide: {
       display: "flex",
       justifyContent: "center",
-      alignItems:"center",
+      alignItems: "center",
     },
     // drawer: {
     //   width: '300px',
     //   display: 'flex',
     // },
     drawerPaper: {
-      width: '300px',
+      width: "300px",
     },
     drawerLinksText: {
       textDecoration: "none",
       color: black,
-      display: 'flex',
-      marginBottom: '10px',
+      display: "flex",
+      marginBottom: "10px",
     },
     drawerSearchBar: {
       backgroundColor: "white",
       color: "white",
       display: "none",
       borderRadius: theme.shape.borderRadius,
-      padding: theme.spacing(0,2),
+      padding: theme.spacing(0, 2),
       height: "32px",
       width: "80%",
       marginRight: "10px",
@@ -157,65 +156,72 @@ const useStyles = makeStyles((theme) => {
       },
     },
     drawerSearchIcon: {
-      fontSize: '3px',
-      marginLeft: '-20px',
+      fontSize: "3px",
+      marginLeft: "-20px",
       pointerEvents: "none",
       color: black,
     },
     drawerIcon: {
-      marginRight: '15px',
+      marginRight: "15px",
       color: black,
     },
     avatar: {
-      margin: '20px 10px 20px 0',
+      margin: "20px 10px 20px 0",
     },
-    appbar:{
-      width:'100vw',
-    }
+    appbar: {
+      width: "100vw",
+    },
   };
 });
 
 const NavBar = () => {
   const classes = useStyles();
   const [left, setLeft] = useState(false);
-  const titleLinkText = {textDecoration: "none",color: "white",}
-  const drawerLinkText = {textDecoration: "none",color: "black",}
+  const titleLinkText = { textDecoration: "none", color: "white" };
+  const drawerLinkText = { textDecoration: "none", color: "black" };
 
-  const toggleDrawer =  (event) => {
-    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+  const toggleDrawer = (event) => {
+    if (
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
       return;
     }
     setLeft(!left);
-    console.log(left)
+    console.log(left);
   };
 
   return (
-    <div position="sticky" className={[classes.navbar,classes.appbar]} disableGutters={true} 
+    <div
+      position="sticky"
+      className={[classes.navbar, classes.appbar]}
+      disableGutters={true}
     >
       <AppBar
         elevation={2}
         className={[classes.whiteColor]}
-        style={{maxWidth:'100vw',position:'fixed',left:0,}}
+        style={{ maxWidth: "100vw", position: "fixed", left: 0 }}
       >
         <Toolbar>
           {/* Navigation Icon */}
-          <IconButton 
-            edge="start" 
+          <IconButton
+            edge="start"
             className={classes.menuIcon}
-            onClick={ toggleDrawer }
+            onClick={toggleDrawer}
           >
-              <MenuIcon className={classes.whiteColor} />
+            <MenuIcon className={classes.whiteColor} />
           </IconButton>
 
-					{/* Title */}
-					<div className={classes.header}>
-						<List className={classes.headerList}>
-
-							<ListItem>
-								<Typography className={classes.title} noWrap variant="h5">
-								<Link to="/" style={titleLinkText}>Alimento</Link>
-								</Typography>
-							</ListItem>
+          {/* Title */}
+          <div className={classes.header}>
+            <List className={classes.headerList}>
+              <ListItem>
+                <Typography className={classes.title} noWrap variant="h5">
+                  <Link to="/" style={titleLinkText}>
+                    Alimento
+                  </Link>
+                </Typography>
+              </ListItem>
 
               <ListItem>
                 <Link to="/" style={titleLinkText} className="linkText">
@@ -234,91 +240,96 @@ const NavBar = () => {
                   Feedback
                 </Link>
               </ListItem>
-
             </List>
           </div>
 
-
           <div className={classes.rightSide}>
-          {/* Search Bar */}
-              <div className={classes.searchBar} onClick={e => console.log('click')}>
-                <div>
-                  <Button className={classes.searchIcon}>
-                    <SearchOutlined />
-                  </Button>
-                </div>
-                <InputBase placeholder="Search…" className={classes.searchInput} />
+            {/* Search Bar */}
+            <div
+              className={classes.searchBar}
+              onClick={(e) => console.log("click")}
+            >
+              <div>
+                <Button className={classes.searchIcon}>
+                  <SearchOutlined />
+                </Button>
               </div>
-
-              {/* Buttons */}
-              <List className={classes.navList}>
-                <ListItem>
-                  <Button variant="outlined" className={classes.navLinks}>
-                    <Link to="/" style={titleLinkText}>
-                      SignUp
-                    </Link>
-                  </Button>
-                </ListItem>
-                <ListItem>
-                  <Button variant="contained">
-                    <Link to="/" style={titleLinkText}>
-                      Login
-                    </Link>
-                  </Button>
-                </ListItem>
-              </List>
+              <InputBase
+                placeholder="Search…"
+                className={classes.searchInput}
+              />
             </div>
-          </Toolbar>
+
+            {/* Buttons */}
+            <List className={classes.navList}>
+              <ListItem>
+                <Button variant="outlined" className={classes.navLinks}>
+                  <Link to="/" style={titleLinkText}>
+                    SignUp
+                  </Link>
+                </Button>
+              </ListItem>
+              <ListItem>
+                <Button variant="contained">
+                  <Link to="/" style={titleLinkText}>
+                    Login
+                  </Link>
+                </Button>
+              </ListItem>
+            </List>
+          </div>
+        </Toolbar>
       </AppBar>
 
       {/* Drawer */}
-      <Drawer 
-        anchor = "left" 
-        open = {left} 
-        onClose = { toggleDrawer }
+      <Drawer
+        anchor="left"
+        open={left}
+        onClose={toggleDrawer}
         classNAme={classes.drawerPaper}
       >
-          <List>
-              <ListItem>
-                <Avatar className={classes.avatar} />
-                <Typography variant="h6">Welcome</Typography>
-              </ListItem>
-
-              <Divider />
-
-              <ListItem>
-                <Link to="/" style={drawerLinkText}>
-                  <InfoIcon className={classes.drawerIcon} />
-                  About
-                </Link>
-              </ListItem>
-              <ListItem>
-                <Link to="/" style={drawerLinkText}>
-                  <RestaurantMenuIcon className={classes.drawerIcon} />
-                  Menu
-                </Link>
-              </ListItem>
-              <ListItem>
-                <Link to="/feedback" style={drawerLinkText}>
-                  <FeedbackIcon className={classes.drawerIcon} />
-                  Feedback
-                </Link>
-              </ListItem>
-          </List>
+        <List>
+          <ListItem>
+            <Avatar className={classes.avatar} />
+            <Typography variant="h6">Welcome</Typography>
+          </ListItem>
 
           <Divider />
 
-          <div className={classes.drawerSearchBar} onClick={e => console.log('click')}>
-              <Button className={classes.drawerSearchIcon}>
-                <SearchOutlined />
-              </Button>
-            <InputBase placeholder="Search…" />
-          </div>
+          <ListItem>
+            <Link to="/" style={drawerLinkText}>
+              <InfoIcon className={classes.drawerIcon} />
+              About
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link to="/" style={drawerLinkText}>
+              <RestaurantMenuIcon className={classes.drawerIcon} />
+              Menu
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link to="/feedback" style={drawerLinkText}>
+              <FeedbackIcon className={classes.drawerIcon} />
+              Feedback
+            </Link>
+          </ListItem>
+        </List>
+
+        <Divider />
+
+        <div
+          className={classes.drawerSearchBar}
+          onClick={(e) => console.log("click")}
+        >
+          <Button className={classes.drawerSearchIcon}>
+            <SearchOutlined />
+          </Button>
+          <InputBase placeholder="Search…" />
+        </div>
       </Drawer>
     </div>
   );
 };
 
 export default NavBar;
-
-
