@@ -37,7 +37,7 @@ const useStyles = makeStyles(theme => {
     root: {
       width: "100%",
       padding: 30,
-      background: 'linear-gradient(135deg,#ffcc80 25%,#3edbf0 85%)',
+      background: 'linear-gradient(135deg,#538FFB 25%,#ff7575 65%)',
     },
     heading: {
       color: "white",
