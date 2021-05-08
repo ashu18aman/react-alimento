@@ -1,5 +1,5 @@
 import Carousel from "react-bootstrap/Carousel";
-import { makeStyles,} from "@material-ui/core";
+import { makeStyles, } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import FormatQuoteIcon from '@material-ui/icons/FormatQuote';
 
@@ -25,7 +25,7 @@ const testimonial = [
   {
     content:
       `     MyEvent is a great way to bring in money for your Fund A Need. The 24/7 tech support allows you to  a Need so much easier to run. Well definitely be using MyEvent again.`,
-     author: 'Amy C., One Less Orphan Fund',
+    author: 'Amy C., One Less Orphan Fund',
 
   },
 ]
@@ -35,9 +35,9 @@ const testimonial = [
 const useStyles = makeStyles(theme => {
   return {
     root: {
-      width:"100%",
-      padding:30,
-      background: 'linear-gradient(135deg,#ac57f2 25%,#3edbf0 85%)',
+      width: "100%",
+      padding: 30,
+      background: 'linear-gradient(135deg,#ffcc80 25%,#3edbf0 85%)',
     },
     heading: {
       color: "white",
@@ -49,32 +49,34 @@ const useStyles = makeStyles(theme => {
       marginTop: 40,
     },
     slides: {
-        // height: 350, 
-        width: "60%", 
-        margin: "auto", 
-        color: "white" ,
-        marginBottom: 140,
+      // height: 350, 
+      width: "60%",
+      margin: "auto",
+      color: "white",
+      marginBottom: 140,
     },
     quote: {
-        fontSize: "1.3rem",
-        largeTop:10,
-        [theme.breakpoints.down("sm")]: {
-           fontSize: "1rem",
-        },
+      fontSize: "1.3rem",
+      largeTop: 10,
+      textAlign: "center",
+      justifyContent: "center",
+      [theme.breakpoints.down("sm")]: {
+        fontSize: "1rem",
+      },
     },
     startQuote: {
       fontSize: "1.1rem",
       marginBottom: 12,
       [theme.breakpoints.down("sm")]: {
-          fontSize: "0.9rem",
+        fontSize: "0.9rem",
       },
     },
     endQuote: {
-      marginLeft:"10px",
+      marginLeft: "10px",
       marginBottom: 15,
       fontSize: "1.1rem",
       [theme.breakpoints.down("sm")]: {
-          fontSize: "0.9rem",
+        fontSize: "0.9rem",
       },
     },
     quoteFrom: {
@@ -86,7 +88,7 @@ const useStyles = makeStyles(theme => {
 
 
 const Testimonials = () => {
-  
+
   const classes = useStyles();
 
   return (
@@ -98,13 +100,15 @@ const Testimonials = () => {
         {testimonial.map((c, index) => {
           return (
             <Carousel.Item interval={5000}>
-              <div  className={classes.slides}>
+              <div className={classes.slides}>
                 <p>
-                  <FormatQuoteIcon className={classes.startQuote}/>
-                    <span className={classes.quote}>
-                      {c.content}
-                    </span>
-                  <FormatQuoteIcon className={classes.endQuote} />
+
+                  <div className={classes.quote}>
+                    <FormatQuoteIcon className={classes.startQuote} />
+                    {c.content}
+                    <FormatQuoteIcon className={classes.endQuote} />
+                  </div>
+
                 </p>
                 <Carousel.Caption>
                   <p className={classes.quoteFrom}>- {c.author} </p>
