@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => {
     root: {
         marginTop: 60,
         height: "auto",
-        background: 'linear-gradient(135deg, #fff9c4 20%, #fff9c4 60%)',
+        background: 'linear-gradient(135deg, #ffb7a6 30%, #ffe075 60%)',
         paddingTop: 15,
         width: '100vw',
         marginLeft: 0,
