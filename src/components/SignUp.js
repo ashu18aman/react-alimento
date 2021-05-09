@@ -6,11 +6,13 @@ import Typography from "@material-ui/core/Typography";
 import { Container } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
+import SendOutlinedIcon from '@material-ui/icons/SendOutlined';
 
 const useStyles = makeStyles(() => {
   return {
     root: {
-      background: "linear-gradient(135deg, #fbe6c2 20%, #fbe6c2 60%)",
+      // background: "linear-gradient(135deg, #fbe6c2 20%, #fbe6c2 60%)",
+      background: "linear-gradient(135deg,#538FFB 25%,#ff7575 65%)",
       marginTop: -20,
       paddingTop: 30,
     },
@@ -109,8 +111,8 @@ const SignUp = () => {
             type="submit"
             className={classes.btn}
           >
-            Sign UP
-          </Button>
+            Sign Up <SendOutlinedIcon />
+          </Button> 
         </Grid>
       </Container>
     </div>

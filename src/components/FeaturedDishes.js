@@ -57,7 +57,7 @@ const Featured = () => {
                     <RecipeReviewCard />
                 </Grid>
                 <Grid item>
-                    <Link style={{ textDecoration: 'none', color: 'black' }}>
+                    <Link to="/menu" style={{ textDecoration: 'none', color: 'black' }}>
                         <div style={{ padding: '50px' }}>
                             <AddIcon fontSize="large" className={classes.addIcon} />
                             <Typography variant="h4" component="h4" align="center" gutterBottom>

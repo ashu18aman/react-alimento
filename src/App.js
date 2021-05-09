@@ -7,6 +7,7 @@ import Feedback from "./components/Feedback";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import Footer from "./components/Footer";
+import Menu from "./components/Menu";
 import "../src/index.css";
 
 const theme = createMuiTheme({});
@@ -28,6 +29,9 @@ function App() {
           </Route>
           <Route path="/signup">
             <SignUp />
+          </Route>
+          <Route path="/menu">
+            <Menu />
           </Route>
         </Switch>
         <Footer />

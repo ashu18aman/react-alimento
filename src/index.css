@@ -20,6 +20,9 @@ code {
     monospace;
 }
 
+.item-row > *{
+  width: 100%;
+}
 
 #root{
   overflow-x: clip;
@@ -33,9 +36,6 @@ code {
 }
 
 @media (max-width:1400px){
-  .linkText{
-    display: none;
-  }
   img{
     height: 90vh;
   }

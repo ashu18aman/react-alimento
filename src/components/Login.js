@@ -6,12 +6,14 @@ import Typography from "@material-ui/core/Typography";
 import { Container } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
+import SendOutlinedIcon from '@material-ui/icons/SendOutlined';
 // import VisibilityIcon from "@material-ui/icons/Visibility";
 
 const useStyles = makeStyles(() => {
   return {
     root:{
-      background: 'linear-gradient(135deg, #fbe6c2 20%, #fbe6c2 60%)',
+      // background: 'linear-gradient(135deg, #fbe6c2 20%, #fbe6c2 60%)',
+      background: 'linear-gradient(45deg,#ac57f2 25%,#3edbf0 95%)',
       marginTop: -20,
       paddingTop:30,
     },
@@ -90,7 +92,7 @@ const Login = () => {
             type="submit"
             className={classes.btn}
           >
-            Login
+            Login <SendOutlinedIcon />
           </Button>
       </Grid>
     </Container>

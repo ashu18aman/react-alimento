@@ -229,7 +229,7 @@ const NavBar = () => {
               </ListItem>
 
               <ListItem>
-                <Link to="/" style={titleLinkText} className="linkText">
+                <Link to="/menu" style={titleLinkText} className="linkText">
                   Menu
                 </Link>
               </ListItem>
@@ -303,7 +303,7 @@ const NavBar = () => {
             </Link>
           </ListItem>
           <ListItem>
-            <Link to="/" style={drawerLinkText}>
+            <Link to="/menu" style={drawerLinkText}>
               <RestaurantMenuIcon className={classes.drawerIcon} />
               Menu
             </Link>
