@@ -20,6 +20,7 @@ code {
     monospace;
 }
 
+
 #root{
   overflow-x: clip;
 }
@@ -30,3 +31,19 @@ code {
     display: none;
   }
 }
+
+@media (max-width:1400px){
+  .linkText{
+    display: none;
+  }
+  img{
+    height: 90vh;
+  }
+}
+
+@media (max-width:600px){
+  img{
+    height: 70vh;
+  }
+}
+
