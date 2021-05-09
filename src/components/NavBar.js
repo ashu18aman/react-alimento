@@ -264,7 +264,7 @@ const NavBar = () => {
             <List className={classes.navList}>
               <ListItem>
                 <Button variant="outlined" className={classes.navLinks}>
-                  <Link to="/" style={titleLinkText}>
+                  <Link to="/signup" style={titleLinkText}>
                     SignUp
                   </Link>
                 </Button>

@@ -5,8 +5,9 @@ import "bootstrap/dist/css/bootstrap.css";
 import Home from "./Home";
 import Feedback from "./components/Feedback";
 import Login from "./components/Login";
-import "../src/index.css";
+import SignUp from "./components/SignUp";
 import Footer from "./components/Footer";
+import "../src/index.css";
 
 const theme = createMuiTheme({});
 
@@ -24,6 +25,9 @@ function App() {
           </Route>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/signup">
+            <SignUp />
           </Route>
         </Switch>
         <Footer />

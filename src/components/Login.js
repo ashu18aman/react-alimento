@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom'
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import Typography from "@material-ui/core/Typography";
@@ -9,17 +10,34 @@ import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles(() => {
   return {
+    root:{
+      background: 'linear-gradient(135deg, #fbe6c2 20%, #fbe6c2 60%)',
+      marginTop: -20,
+      paddingTop:30,
+    },
     heading: {
       textAlign: "center",
       marginTop: 84,
       marginBottom: 40,
     },
+    fields: {
+      marginTop: 5,
+      marginBottom: 10,
+      textAlign:"center",
+    },
     textarea: {
-      marginTop: -40,
+      margin:"auto",
+    },
+    forgotpassword:{
+      marginLeft: 15,
+      marginTop: -10,
+      marginBottom: 30,
     },
     btn:{
-      width: "40%",
+      width: "95%",
       margin: "auto",
+      marginBottom: 60,
+      padding:15,
     }
   };
 });
@@ -27,13 +45,14 @@ const useStyles = makeStyles(() => {
 const Login = () => {
   const classes = useStyles();
   return (
+    <div className={classes.root}>
     <Container>
       <Typography className={classes.heading} variant="h2">
         Login Form
       </Typography>
       <Grid container spacing={3}>
         <Grid item xs={12}>
-          <Typography className={classes.heading} variant="h4">
+          <Typography className={classes.fields} variant="h4">
             Email Address
           </Typography>
           <TextField
@@ -47,13 +66,14 @@ const Login = () => {
           />
         </Grid>
         <Grid item xs={12}>
-          <Typography className={classes.heading} variant="h4">
+          <Typography className={classes.fields} variant="h4">
             Password
             {/* <VisibilityIcon /> */}
           </Typography>
           <TextField
             className={classes.textarea}
             label="Password"
+            type="password"
             variant="outlined"
             color="secondary"
             required
@@ -61,18 +81,20 @@ const Login = () => {
             fullWidth
           />
         </Grid>
-        <Grid item>
+          <Typography variant="p" className={classes.forgotpassword}>
+            <Link to="#">Forgot Password? </Link>
+          </Typography>
           <Button
             color="secondary"
             variant="contained"
-            size="medium"
+            type="submit"
             className={classes.btn}
           >
-            Submit
+            Login
           </Button>
-        </Grid>
       </Grid>
     </Container>
+    </div>
   );
 };
 
