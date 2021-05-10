@@ -13,11 +13,26 @@ import Typography from '@material-ui/core/Typography';
 import { red } from '@material-ui/core/colors';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import img3 from "./Images/thali.jpg";
+import { SendOutlined } from '@material-ui/icons';
+import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom'
 
 const useStyles = makeStyles((theme) => ({
   root: {
     margin: 20,
-    maxWidth: 345,
+    width: 345,
+    [theme.breakpoints.down("sm")]:{
+      width: 300,
+    },
+    flexShrink: 0,
+    paddingBottom: "3px",
+    transition: '0.3s ease-in',
+    '&:hover': {
+      transform: "scale(1.05)",
+    },
+  },
+  header: {
+    // background: 'linear-gradient(180deg, #ff9d85 20%, #FED54A 60%)',
   },
   media: {
     height: 0,
@@ -35,6 +50,14 @@ const useStyles = makeStyles((theme) => ({
   },
   avatar: {
     backgroundColor: red[500],
+  },
+  buy: {
+    width: '60%',
+    margin: '10px auto',
+    background: 'orange',
+    '&:hover': {
+      background: 'lightgreen',
+    },
   },
 }));
 
@@ -54,8 +77,9 @@ export default function RecipeReviewCard({ title, content}) {
             A
           </Avatar>
         }
-        title="Shrimp and Chorizo Paella"
+        title={title}
         subheader="September 14, 2016"
+        className={classes.header}
       />
       <CardMedia
         className={classes.media}
@@ -64,17 +88,19 @@ export default function RecipeReviewCard({ title, content}) {
       />
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
-          This impressive paella is a perfect party dish and a fun meal to cook together with your
-          guests. Add 1 cup of frozen peas along with the mussels, if you like.
+          {content}
         </Typography>
       </CardContent>
-      <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
+      <CardActions >
+        {/* <IconButton aria-label="add to favorites">
           <FavoriteIcon />
-        </IconButton>
-  
+        </IconButton> */}
+          <Button component={Link} to="/cart" variant="contained" color="secondary" className={classes.buy}>
+            Buy Now <SendOutlined style={{marginLeft:'10px'}}/>
+          </Button>
       </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
+      
+      {/* <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
           <Typography paragraph>Method:</Typography>
           <Typography paragraph>
@@ -100,7 +126,7 @@ export default function RecipeReviewCard({ title, content}) {
             Set aside off of the heat to let rest for 10 minutes, and then serve.
           </Typography>
         </CardContent>
-      </Collapse>
+      </Collapse> */}
     </Card>
   );
 }

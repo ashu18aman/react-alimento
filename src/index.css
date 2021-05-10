@@ -2,6 +2,7 @@ html{
   /* filter: invert(1) hue-rotate(180deg); */
   width:100%;
   overflow-x: hidden;
+  /* overflow: scroll; */
   margin:0;
   padding:0;
 }
@@ -22,6 +23,10 @@ code {
 
 .item-row > *{
   width: 100%;
+}
+
+.card:hover{
+  transform: scale(1.5);
 }
 
 #root{

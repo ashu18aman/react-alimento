@@ -1,5 +1,5 @@
 import { Container, Grid } from '@material-ui/core';
-import React from 'react';
+import items from "./MenuItems";
 import RecipeReviewCard from './Card';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
@@ -41,7 +41,7 @@ const Featured = () => {
                     width: '100%',
                   }}    
             >
-                <Grid item>
+                {/* <Grid item>
                     <RecipeReviewCard />
                 </Grid>
                 <Grid item>
@@ -55,7 +55,16 @@ const Featured = () => {
                 </Grid>
                 <Grid item>
                     <RecipeReviewCard />
-                </Grid>
+                </Grid> */}
+
+                {
+                    items.slice(6).map(item => (
+                        <Grid item>
+                            <RecipeReviewCard title={item.title} content={item.content}/>
+                        </Grid>
+                    ))
+                }
+
                 <Grid item>
                     <Link to="/menu" style={{ textDecoration: 'none', color: 'black' }}>
                         <div style={{ padding: '50px' }}>
