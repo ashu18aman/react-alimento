@@ -41,6 +41,7 @@ const useStyles = makeStyles(theme => {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
+            // fontSize: '10px',
             '&:hover': {
                 background: 'rgba(207, 207, 207, 0.5)',
             },
@@ -58,6 +59,7 @@ const useStyles = makeStyles(theme => {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
+            // fontSize: '10px',
             '&:hover': {
                 background: 'rgba(207, 207, 207, 0.5)',
             },
@@ -95,10 +97,10 @@ const Row = ({ title, items }) => {
                 {/* <RecipeReviewCard /> */}
             </div>
             <div className={classes.leftbtn} onClick={e => scroll(-690)} >
-                <ChevronLeftIcon />
+                <ChevronLeftIcon fontSize="large" />
             </div>
             <div className={classes.rightbtn} onClick={e => scroll(690)} >
-                <ChevronRightIcon />
+                <ChevronRightIcon fontSize="large" />
             </div>
         </div>
     )
