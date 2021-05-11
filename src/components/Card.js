@@ -69,6 +69,8 @@ export default function RecipeReviewCard({ title, content}) {
     setExpanded(!expanded);
   };
 
+  
+
   return (
     <Card className={classes.root}>
       <CardHeader
