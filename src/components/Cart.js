@@ -7,6 +7,7 @@ const useStyles = makeStyles(theme => {
         root: {
             marginTop: '94px',
             height: '100%',
+            textAlign: 'center',
         },
     };
 });
@@ -18,6 +19,8 @@ const Cart = () => {
     return (
         <div className={classes.root}>
             <Typography variant="h4">
+                101
+                <br />
                 Page under development.....
             </Typography>
         </div>
