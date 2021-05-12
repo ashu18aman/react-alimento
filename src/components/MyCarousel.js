@@ -1,7 +1,7 @@
 import Carousel from "react-bootstrap/Carousel";
-import img1 from "./Images/restaurant-view.jpg";
-import img2 from "./Images/snacks.jpg";
-import img3 from "./Images/thali.jpg";
+// import img1 from "./Images/restaurant-view.jpg";
+// import img2 from "./Images/snacks.jpg";
+// import img3 from "./Images/thali.jpg";
 import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => {
@@ -37,7 +37,7 @@ const MyCarousel = () => {
         <Carousel.Item className={classes.item}>
           <img
             className="d-block w-100 silder-image"
-            src={img2}
+            src="images/snacks.jpg"
             alt="Second slide"
           />
           <Carousel.Caption>
@@ -49,7 +49,7 @@ const MyCarousel = () => {
         <Carousel.Item className={classes.item}>
           <img
             className="d-block w-100 silder-image"
-            src={img1}
+            src="images/restaurant-view.jpg"
             alt="First slide"
           />
           <Carousel.Caption>
@@ -61,7 +61,7 @@ const MyCarousel = () => {
         <Carousel.Item className={classes.item}>
           <img
             className="d-block w-100 silder-image"
-            src={img3}
+            src="images/thali.jpg"
             alt="Third slide"
           />
           <Carousel.Caption>

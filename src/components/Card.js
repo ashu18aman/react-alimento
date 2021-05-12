@@ -12,7 +12,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import { red } from '@material-ui/core/colors';
 import FavoriteIcon from '@material-ui/icons/Favorite';
-import img3 from "./Images/thali.jpg";
+// import img3 from "./Images/thali.jpg";
 import { SendOutlined } from '@material-ui/icons';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom'
@@ -27,12 +27,16 @@ const useStyles = makeStyles((theme) => ({
     flexShrink: 0,
     paddingBottom: "3px",
     transition: '0.3s ease-in',
+    borderRadius: '20px',
     '&:hover': {
       transform: "scale(1.05)",
     },
   },
   header: {
     // background: 'linear-gradient(180deg, #ff9d85 20%, #FED54A 60%)',
+  },
+  avatar: {
+
   },
   media: {
     height: 0,
@@ -49,19 +53,19 @@ const useStyles = makeStyles((theme) => ({
     transform: 'rotate(180deg)',
   },
   avatar: {
-    backgroundColor: red[500],
+    backgroundColor: 'green',
   },
   buy: {
     width: '60%',
     margin: '10px auto',
     background: 'orange',
     '&:hover': {
-      background: 'lightgreen',
+      background: '#ff7066',
     },
   },
 }));
 
-export default function RecipeReviewCard({ title, content}) {
+export default function RecipeReviewCard({ title, content, img, type}) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -75,8 +79,8 @@ export default function RecipeReviewCard({ title, content}) {
     <Card className={classes.root}>
       <CardHeader
         avatar={
-          <Avatar aria-label="recipe" className={classes.avatar}>
-            A
+          <Avatar aria-label="recipe" style={{background: `${type === 'V' ? 'green' : 'red' }`}}>
+            { type === 'V' ? 'V' : 'N' }
           </Avatar>
         }
         title={title}
@@ -85,7 +89,7 @@ export default function RecipeReviewCard({ title, content}) {
       />
       <CardMedia
         className={classes.media}
-        image={img3}
+        image={img}
         title="Paella dish"
       />
       <CardContent>

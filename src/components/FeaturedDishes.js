@@ -60,7 +60,9 @@ const Featured = () => {
                 {
                     items.slice(6).map(item => (
                         <Grid item>
-                            <RecipeReviewCard title={item.title} content={item.content}/>
+                            <RecipeReviewCard title={item.title} content={item.content}
+                                img={item.img} type={item.type}
+                            />
                         </Grid>
                     ))
                 }

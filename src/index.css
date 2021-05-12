@@ -29,6 +29,10 @@ code {
   transform: scale(1.5);
 }
 
+.icon-btn{
+  display: block;
+}
+
 #root{
   overflow-x: clip;
 }
@@ -49,6 +53,12 @@ code {
 @media (max-width:600px){
   img{
     height: 70vh;
+  }
+}
+
+@media (max-width:400px){
+  .icon-btn{
+    display: none;
   }
 }
 
