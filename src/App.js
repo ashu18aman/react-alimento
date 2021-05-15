@@ -12,6 +12,7 @@ import Cart from "./components/Cart";
 import "../src/index.css";
 import Loading from "./components/Loading";
 import React, { useState, useEffect } from 'react';
+import SignUp__ from "./MyExperiments/SignUp_"
 
 const theme = createMuiTheme({});
 
