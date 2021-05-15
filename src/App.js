@@ -50,7 +50,7 @@ function App() {
                   <Login />
                 </Route>
                 <Route path="/signup">
-                  <SignUp />
+                  <SignUp__ />
                 </Route>
                 <Route path="/menu">
                   <Menu />

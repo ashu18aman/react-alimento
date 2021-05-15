@@ -50,7 +50,8 @@ export default function SignUp() {
   const classes = useStyles();
 
   return (
-    <Container component="main" maxWidth="xs">
+    <div style={{background: 'linear-gradient(45deg,#ac57f2 25%,#3edbf0 95%)',}}>
+    <Container  component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>
@@ -110,7 +111,7 @@ export default function SignUp() {
             <Grid item xs={12}>
               <FormControlLabel
                 control={<Checkbox value="allowExtraEmails" color="primary" />}
-                label="I want to receive inspiration, marketing promotions and updates via email."
+                label="__....."
               />
             </Grid>
           </Grid>
@@ -123,7 +124,7 @@ export default function SignUp() {
           >
             Sign Up
           </Button>
-          <Grid container justify="flex-end">
+          <Grid container justify="flex-center">
             <Grid item>
               <Link href="#" variant="body2">
                 Already have an account? Sign in
@@ -136,5 +137,7 @@ export default function SignUp() {
         <Copyright />
       </Box>
     </Container>
+    </div>
   );
+
 }
