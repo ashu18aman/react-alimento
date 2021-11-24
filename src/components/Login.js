@@ -12,8 +12,8 @@ import SendOutlinedIcon from '@material-ui/icons/SendOutlined';
 const useStyles = makeStyles(() => {
   return {
     root:{
-      // background: 'linear-gradient(135deg, #fbe6c2 20%, #fbe6c2 60%)',
-      background: 'linear-gradient(45deg,#ac57f2 25%,#3edbf0 95%)',
+      background: 'linear-gradient(135deg, #fbe6c2 20%, #fbe6c2 60%)',
+      // background: 'linear-gradient(45deg,#ac57f2 25%,#3edbf0 95%)',
       marginTop: -20,
       paddingTop:30,
     },
