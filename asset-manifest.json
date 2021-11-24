@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/ashu18aman.github.io/react-alimento/static/css/main.d686aaac.chunk.css",
+    "main.js": "/ashu18aman.github.io/react-alimento/static/js/main.067770c2.chunk.js",
+    "main.js.map": "/ashu18aman.github.io/react-alimento/static/js/main.067770c2.chunk.js.map",
+    "runtime-main.js": "/ashu18aman.github.io/react-alimento/static/js/runtime-main.65557ca4.js",
+    "runtime-main.js.map": "/ashu18aman.github.io/react-alimento/static/js/runtime-main.65557ca4.js.map",
+    "static/css/2.ef9168ec.chunk.css": "/ashu18aman.github.io/react-alimento/static/css/2.ef9168ec.chunk.css",
+    "static/js/2.950e9b83.chunk.js": "/ashu18aman.github.io/react-alimento/static/js/2.950e9b83.chunk.js",
+    "static/js/2.950e9b83.chunk.js.map": "/ashu18aman.github.io/react-alimento/static/js/2.950e9b83.chunk.js.map",
+    "static/js/3.075fe9c7.chunk.js": "/ashu18aman.github.io/react-alimento/static/js/3.075fe9c7.chunk.js",
+    "static/js/3.075fe9c7.chunk.js.map": "/ashu18aman.github.io/react-alimento/static/js/3.075fe9c7.chunk.js.map",
+    "index.html": "/ashu18aman.github.io/react-alimento/index.html",
+    "static/css/2.ef9168ec.chunk.css.map": "/ashu18aman.github.io/react-alimento/static/css/2.ef9168ec.chunk.css.map",
+    "static/css/main.d686aaac.chunk.css.map": "/ashu18aman.github.io/react-alimento/static/css/main.d686aaac.chunk.css.map",
+    "static/js/2.950e9b83.chunk.js.LICENSE.txt": "/ashu18aman.github.io/react-alimento/static/js/2.950e9b83.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.65557ca4.js",
+    "static/css/2.ef9168ec.chunk.css",
+    "static/js/2.950e9b83.chunk.js",
+    "static/css/main.d686aaac.chunk.css",
+    "static/js/main.067770c2.chunk.js"
+  ]
+}
